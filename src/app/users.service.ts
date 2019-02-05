@@ -17,7 +17,7 @@ export class UsersService{
   // Call the HttpClient in the Constructor
   constructor(private http: HttpClient) {}
 
-  // Set up a simple ovservable
+  // Set up a simple observable
   getUsers(): Observable<User> {
     return this.http.get<User>(this.url);
   }

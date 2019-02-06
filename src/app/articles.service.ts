@@ -13,7 +13,7 @@ export class ArticlesService {
     return this.http.get<Article>(this.url);
   }
 
-  getArticles(id: string): Observable<Article> {
-    return this.http.get<Article>(`${this.url}/${id}`);
-  }
+  //getArticles(id: string): Observable<Article> {
+   // return this.http.get<Article>(`${this.url}/${id}`);
+  //}
 }

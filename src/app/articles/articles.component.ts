@@ -18,7 +18,7 @@ export class ArticlesComponent implements OnInit {
   }
 
   getArticles(): void {
-    this.articlesService.getArticles.subscribe(
+    this.articlesService.getArticle.subscribe(
       (response) => {
         this.articles = response.articles,
         console.log(this.articles)

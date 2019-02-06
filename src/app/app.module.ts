@@ -11,6 +11,9 @@ import { UserViewComponent } from './user-view/user-view.component';
 import { UserCreateComponent } from './user-create/user-create.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
 import { ArticlesComponent } from './articles/articles.component';
+import { ArticleViewComponent } from './article-view/article-view.component';
+import { ArticleCreateComponent } from './article-create/article-create.component';
+import { ArticleEditComponent } from './article-edit/article-edit.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { ArticlesComponent } from './articles/articles.component';
     UserViewComponent,
     UserCreateComponent,
     UserEditComponent,
-    ArticlesComponent
+    ArticlesComponent,
+    ArticleViewComponent,
+    ArticleCreateComponent,
+    ArticleEditComponent
   ],
   imports: [
     BrowserModule,

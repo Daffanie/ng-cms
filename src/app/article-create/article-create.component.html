@@ -1,3 +1,31 @@
-<p>
-  article-create works!
-</p>
+<h1>Create a New Article</h1>
+
+<form (ngSubmit)="onSubmit()" #createUser="ngForm">
+
+  <div *ngIf="errorMessage">{{errorMessage}}</div>
+
+  <div>
+    <label for="article_name">Article</label>
+    <input [(ngModel)]="user.username" type="text" name="username" id="username">
+    <div *ngIf="errors.username">{{errors.username.message}}</div>
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <input [(ngModel)]="user.email" type="text" name="email" id="email">
+    <div *ngIf="errors.email">{{errors.email.message}}</div>
+  </div>
+
+  <div>
+    <label for="description">Description</label>
+    <input [(ngModel)]="article.description" type="text" name="description" id="description">
+  </div>
+
+  <div>
+    <label for="body">Body</label>
+    <input [(ngModel)]="article.body" type="text" name="body" id="body">
+  </div>
+
+  <button type="submit">Submit</button>
+
+</form>

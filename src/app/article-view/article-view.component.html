@@ -1,3 +1,7 @@
-<p>
-  article-view works!
-</p>
+<div *ngIf="article">
+  <!--<h1>{{user.first_name}} {{user.last_name}}</h1>
+  <div><strong>Username:</strong> {{user.username}}</div>-->
+  <div><strong>Email:</strong> {{article.email}}</div>
+  <button [routerLink]="['/article/edit/', article._id]">Article</button>
+  <!--<button (click)="deleteUser(user._id)">Delete</button>-->
+</div>

@@ -1,3 +1,41 @@
-<p>
-  article-edit works!
-</p>
+<h1 *ngIf="article">Edit {{user.first_name}} {{user.last_name}}</h1>
+
+<form *ngIf="article" (ngSubmit)="onSubmit()" #editUser="ngForm">
+
+  <div *ngIf="errorMessage">{{errorMessage}}</div>
+
+  <input [(ngModel)]="article._id" type="hidden" name="_id" id="_id">
+
+  <div>
+    <label for="username">Username</label>
+    <input [(ngModel)]="article.username" type="text" name="username" id="username">
+    <div *ngIf="errors.username">{{errors.username.message}}</div>
+  </div>
+
+  <div>
+    <label for="title">Title</label>
+    <input [(ngModel)]="article.title" type="text" name="title" id="title">
+    <div *ngIf="errors.title">{{errors.title.message}}</div>
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <input [(ngModel)]="article.email" type="text" name="email" id="email">
+    <div *ngIf="errors.email">{{errors.email.message}}</div>
+  </div>
+
+  <div>
+    <label for="description">Description</label>
+    <input [(ngModel)]="article.description" type="text" name="description" id="description">
+    <div *ngIf="errors.description">{{errors.description.message}}</div>
+  </div>
+
+  <div>
+    <label for="body">Body</label>
+    <input [(ngModel)]="article.body" type="text" name="body" id="body">
+    <div *ngIf="errors.body">{{errors.body.message}}</div>
+  </div>
+
+  <button type="submit">Submit</button>
+
+</form>

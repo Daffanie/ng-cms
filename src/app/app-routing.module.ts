@@ -16,13 +16,15 @@ import { ArticleEditComponent } from './article-edit/article-edit.component';
 const routes: Routes = [
   // The default route
   { path: '', redirectTo: '/users', pathMatch: 'full' },
+  { path: '', redirectTo: '/articles', pathMatch: 'full'},
+
   // Map /users to the UsersComponent
   { path: 'users', component: UsersComponent},
   { path: 'articles', component: ArticlesComponent},
   { path: 'users/view/:id', component: UserViewComponent},
   { path: 'users/create', component: UserCreateComponent},
   { path: 'users/edit/:id', component: UserEditComponent},
-  { path: 'article/view/:id', component: ArticleViewComponent},
+  { path: 'articles/view/:id', component: ArticleViewComponent},
   { path: 'article/create', component: ArticleCreateComponent},
   { path: 'article/edit/:id', component: ArticleEditComponent}
 

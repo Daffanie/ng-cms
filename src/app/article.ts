@@ -1,7 +1,8 @@
 export class Article {
+  _id: string;
   email: string;
-  first_name: string;
-  last_name: string;
+  title: string;
   description: string;
   body: string;
+  created: Date;
 }

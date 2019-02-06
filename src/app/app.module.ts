@@ -14,6 +14,7 @@ import { ArticlesComponent } from './articles/articles.component';
 import { ArticleViewComponent } from './article-view/article-view.component';
 import { ArticleCreateComponent } from './article-create/article-create.component';
 import { ArticleEditComponent } from './article-edit/article-edit.component';
+import { ArticlesService } from './articles.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { ArticleEditComponent } from './article-edit/article-edit.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [UsersService],
+  providers: [UsersService, ArticlesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
